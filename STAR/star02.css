@@ -1,0 +1,63 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@200&family=Orbit&display=swap");
+body {
+  overflow-x: hidden;
+  font-family: "Noto Serif KR", serif;
+  /* background: url(https://images.unsplash.com/photo-1475274047050-1d0c0975c63e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1172&q=80); */
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* color: white; */
+}
+
+.starBg {
+  /* background: url(image/bg.jfif); */
+}
+
+section {
+  position: relative;
+  width: 100vw;
+}
+section.top {
+  min-height: 160vh;
+  justify-content: center;
+  left: 32%;
+  top: 66%;
+  /* transform: translate(-50%, -50%); */
+}
+section.top h1.title {
+  position: relative;
+  color: white;
+  text-align: center;
+  padding-top: 35vh;
+  font-size: 40px;
+  font-weight: 100;
+}
+section.bottom {
+  /* background: url(image/bg.jfif) center bottom / 100% no-repeat; */
+  min-height: 60vh;
+}
+section.bottom .contWrap {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 700px;
+}
+section.bottom .contWrap ul li {
+  display: inline-block;
+  margin: 0 2%;
+  width: 130px;
+  height: 200px;
+  border-radius: 6px 6px 6px 6px;
+  box-sizing: border-box;
+  padding: 10px;
+  background: linear-gradient(45deg, #1f0a5e, #9f83f3);
+}
+section.bottom .contWrap ul li p {
+  font-size: 20px;
+  color: white;
+  border-bottom: 2px dashed white;
+}
+section.bottom .contWrap h2 {
+  text-align: center;
+  color: white;
+  margin-top: 30px;
+  font-weight: 100;
+}
