@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        overflow-x: hidden;
+        background-color: #000;
+      }
+
+      section {
+        position: relative;
+        height: 100vh;
+        width: 100vw;
+        border-top: 1px dashed #333;
+        z-index: 100;
+      }
+
+      .innerWrap {
+        position: relative;
+        z-index: 50;
+        padding: 120px;
+        width: 340px;
+        margin-top: 50px;
+      }
+
+      /* 이미지 영역 활성 */
+      .imageWrap {
+        position: fixed;
+        right: 10%;
+        top: 10%;
+        width: 50%;
+      }
+
+      .image {
+        position: absolute;
+        width: 50%;
+        opacity: 0;
+        transition: all is ease-in-out;
+      }
+
+      .image.active {
+        opacity: 1;
+      }
+
+      h1 {
+        color: white;
+        text-align: center;
+        margin-top: 40vh;
+        font-size: 60px;
+      }
+      h2 {
+        color: #333;
+      }
+      p {
+        color: white;
+        font-size: 16px;
+        line-height: 24px;
+      }
+    </style>
+    <script>
+      window.onload = function () {
+        var section = document.getElementsByTagName("section");
+        var image = document.querySelectorAll(".image");
+        var pageNum = 0;
+        var totalNum = image.length;
+
+        window.addEventListener("scroll", function (event) {
+          var scroll = this.scrollY;
+
+          for (var i = 0; i < totalNum; i++) {
+            if (
+              scroll > section[i].offsetTop - window.outerHeight / 1.5 &&
+              scroll <
+                section[i].offsetTop -
+                  window.outerHeight / 1.5 +
+                  section[i].offsetHeight
+            ) {
+              pageNum = i;
+              break;
+            }
+          }
+          pageChangeFunc();
+        });
+
+        function pageChangeFunc() {
+          for (var i = 0; i < totalNum; i++) {
+            // active 한번 싹 지우기
+            image[i].classList.remove("active");
+          }
+          // pageNum에 있는 페이지만 active
+          image[pageNum].classList.add("active");
+        }
+        pageChangeFunc();
+      };
+    </script>
+  </head>
+  <body>
+    <section>
+      <h1>아리스 모음집</h1>
+    </section>
+
+    <section>
+      <div class="innerWrap">
+        <h2>page1</h2>
+        <p>아리스 1구역</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="innerWrap">
+        <h2>page2</h2>
+        <p>아리스 2구역</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="innerWrap">
+        <h2>page3</h2>
+        <p>아리스 3구역</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="innerWrap">
+        <h2>page4</h2>
+        <p>아리스 4구역</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="innerWrap">
+        <h2>page5</h2>
+        <p>아리스 5구역</p>
+      </div>
+    </section>
+
+    <div class="imageWrap">
+      <img src="./aris_default_04.png" class="image" alt="" />
+      <img src="./aris_default_06.png" class="image" alt="" />
+      <img src="./aris_default_08.png" class="image" alt="" />
+      <img src="./aris_default_10.png" class="image" alt="" />
+      <img src="./aris_default_11.png" class="image" alt="" />
+    </div>
+  </body>
+</html>
