@@ -8,10 +8,6 @@ body {
   /* color: white; */
 }
 
-.starBg {
-  /* background: url(image/bg.jfif); */
-}
-
 .title div {
   opacity: 0;
   /* 또는 display: none; */
@@ -33,7 +29,8 @@ section.top {
   flex-direction: column;
   align-items: center;
   /* justify-content: center; */
-  min-height: 140vh;
+  min-height: 150vh;
+  margin-top: 200px;
 }
 
 section.bottom h1.title {
@@ -52,7 +49,7 @@ section.bottom h1.title div {
 
 section.bottom {
   /* background: url(image/bg.jfif) center bottom / 100% no-repeat; */
-  min-height: 60vh;
+  min-height: 160vh;
 }
 section.bottom .contWrap {
   margin: 0 auto;
@@ -88,5 +85,50 @@ section.bottom .contWrap h2 {
   text-align: center;
   /* color: white; */
   margin-top: 30px;
+  font-weight: 100;
+}
+
+/* ################################################## */
+
+section.bottom2 {
+  margin-top: 500px;
+}
+
+.cardItem {
+  position: absolute;
+  width: 200px;
+  height: 110px;
+  padding: 15px;
+  margin: 10px;
+  border-radius: 10px;
+  box-shadow: 100px 110px 100px rgba(0, 0, 0, 0.3);
+  font-size: 1rem;
+  text-align: right;
+}
+
+.buttonWrap {
+  position: absolute;
+  /* bottom: 20px; */
+  left: 50%;
+  transform: translateX(-50%);
+}
+.buttonWrap button {
+  position: relative;
+  z-index: 100;
+  margin: 0 5px;
+  background: black;
+  color: #fff;
+  padding: 8px 20px;
+  transition: all 0.3s ease-out;
+}
+
+.buttonWrap button:hover {
+  background-color: #fad7f8;
+}
+
+h1 {
+  position: fixed;
+  text-align: center;
+  width: 100%;
   font-weight: 100;
 }
